@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Quiz Rewards</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav"><a class="brand" href="index.html">Quiz Rewards</a></div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1>About Quiz Rewards</h1>
+      <p class="muted">A lightweight, family-friendly quiz game built to help users learn while optionally earning small rewards through rewarded ads. The app is designed for mobile and desktop browsers and is PWA-ready.</p>
+
+      <h3>Features</h3>
+      <ul>
+        <li>50+ built-in questions (expandable)</li>
+        <li>Optional rewarded ads (replace placeholder with your ad SDK)</li>
+        <li>Professional privacy policy and FAQ pages</li>
+      </ul>
+
+      <p><button class="btn" onclick="location.href='index.html'">🏠 Back to Home</button></p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container foot"><p>© <span id="year"></span> Quiz Rewards</p></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

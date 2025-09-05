@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FAQ — Quiz Rewards</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header"><div class="container nav"><a class="brand" href="index.html">Quiz Rewards</a></div></header>
+
+  <main class="container">
+    <section class="card">
+      <h1>Frequently Asked Questions</h1>
+
+      <details open><summary>How do I play?</summary>
+        <p class="muted">Open the app, press Start Game, answer the multiple-choice questions. Correct answers give points and coins.</p>
+      </details>
+
+      <details><summary>How do rewards work?</summary>
+        <p class="muted">When you choose to watch a rewarded ad (optional), you receive the specified reward. Ads are powered by third-party networks — replace placeholders with your integration.</p>
+      </details>
+
+      <details><summary>Is the game free?</summary>
+        <p class="muted">Yes. The game is free to play. Rewarded ads are optional.</p>
+      </details>
+
+      <details><summary>Where is my data stored?</summary>
+        <p class="muted">Game progress (coins & highscores) is stored locally in your browser's localStorage. We do not collect personal data unless you contact us.</p>
+      </details>
+
+      <p><button class="btn" onclick="location.href='index.html'">🏠 Back to Home</button></p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container foot"><p>© <span id="year"></span> Quiz Rewards</p></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

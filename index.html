@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz Rewards — Play & Earn</title>
+  <meta name="description" content="Play a family-friendly quiz, earn coins with rewarded ads. Lightweight PWA-ready web app." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Quiz Rewards</a>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html" class="btn small">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Splash -->
+  <section id="splash" class="center splash">
+    <div class="splash-inner">
+      <div class="logo-anim" aria-hidden="true">
+        <div class="book"></div>
+        <div class="sparkles"></div>
+      </div>
+      <h1>Quiz Rewards</h1>
+      <p class="muted">Play • Learn • Earn — Family friendly</p>
+      <div class="splash-cta">
+        <button id="btnEnter" class="btn btn-primary">Enter App</button>
+        <a href="game.html" class="linkless">Direct Play</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Menu (hidden after splash) -->
+  <main id="mainMenu" class="container hidden">
+    <section class="card center">
+      <h2>Welcome</h2>
+      <p class="muted">50-question pack • Lightweight • PWA-ready</p>
+      <div class="menu-buttons">
+        <button id="startGameBtn" class="btn btn-primary big">▶ Start Game</button>
+        <a class="btn" href="about.html">ℹ About</a>
+        <a class="btn" href="blog.html">📰 Blog</a>
+        <a class="btn" href="faq.html">❓ FAQ</a>
+        <a class="btn" href="contact.html">📩 Contact</a>
+        <a class="btn" href="privacy.html">🔒 Privacy Policy</a>
+      </div>
+      <div class="home-stats">
+        <div>Coins: <strong id="homeCoins">0</strong></div>
+        <div>Highscore: <strong id="homeHigh">0</strong></div>
+      </div>
+    </section>
+
+    <section class="card features grid-3">
+      <div><h4>Rewarded Ads</h4><p class="muted">Optional ads give coins or extra lives — replace placeholder with your ad SDK.</p></div>
+      <div><h4>Offline-ready</h4><p class="muted">PWA friendly — service worker can be added later.</p></div>
+      <div><h4>Family-friendly</h4><p class="muted">Clean content suitable for all ages.</p></div>
+    </section>
+  </main>
+
+  <!-- Game page (separate file 'game.html' is also provided) -->
+  <!-- We provide a quick in-place game modal (optional). -->
+  <div id="gameModal" class="overlay hidden">
+    <div class="card modal-card">
+      <div class="hud">
+        <div class="chip">Coins: <strong id="coins">0</strong></div>
+        <div class="chip">Score: <strong id="score">0</strong></div>
+        <div class="chip">Lives: <strong id="lives">3</strong></div>
+        <div class="chip">Q: <strong id="qIndex">0</strong>/<span id="qTotal">50</span></div>
+      </div>
+
+      <div id="gameArea">
+        <div id="questionBox" class="question">
+          <h2 id="questionText">Press Start to play</h2>
+        </div>
+        <div id="answers" class="answers"></div>
+
+        <div class="row space">
+          <button id="btnSkip" class="btn btn-ghost" disabled>Skip (-5 coins)</button>
+          <button id="btnRewardCoins" class="btn" disabled>Watch Ad → +50 Coins</button>
+          <button id="btnRewardLife" class="btn" disabled>Watch Ad → +1 Life</button>
+        </div>
+
+        <div class="row center" style="margin-top:12px">
+          <button id="btnCloseGame" class="btn btn-ghost">Exit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container foot">
+      <p>© <span id="year"></span> Quiz Rewards — Built with care.</p>
+      <div class="foot-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Ad network placeholders (paste your ad scripts here)
+       Example spots:
+       - Google AdSense (if using web-monetization / matched content)
+       - Adsterra / other ad network JS
+       IMPORTANT: Only place official vendor scripts you are authorized to use.
+  -->
+  <!--
+  <!-- Example: paste AdSense snippet here if you have one -->
+  <!-- <script data-ad-client="ca-pub-XXXXXXXXXXXX" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+  -->
+
+  <script src="script.js" defer></script>
+</body>
+</html>
